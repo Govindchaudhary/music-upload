@@ -13,13 +13,7 @@ from django.db.models import Q
 
  
 
-#class IndexView(generic.ListView):
-     
-     #template_name = 'music/index.html'
-     
 
-     #def get_queryset(self):
-           #return Album.objects.all()
 def index(request):
     if not request.user.is_authenticated():
         return redirect( 'music:login')
